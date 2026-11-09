@@ -12,7 +12,7 @@ class GymnasiumContracts(unittest.TestCase):
         obs, info=env.reset(seed=42)
         self.assertEqual(obs,0)
         self.assertIn("A",env.render())
-        for action in [1,1,0,1,0,1]:  # down, down, right, down, right, down
+        for action in [1,1,0,1,0,0]:  # down, down, right, down, right, down
             obs, reward, terminated, truncated, info=env.step(action)
         self.assertTrue(terminated)
         self.assertEqual(reward,1.0)
